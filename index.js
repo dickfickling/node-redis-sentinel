@@ -86,6 +86,7 @@ Sentinel.prototype.createClientInternal = function(masterName, opts) {
                 port: port,
                 host: host
             };
+            client.address = host + ':' + port;
             client.connectionOption = connectionOption;
             client.stream.connect(connectionOption.port, connectionOption.host);
 
